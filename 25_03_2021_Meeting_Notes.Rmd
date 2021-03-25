@@ -1,0 +1,62 @@
+--
+title: "25.03.2021 Meeting 1"
+output: html_document
+attendees:: "Chris + Dani"
+
+---
+## Meeting Agenda 25-03-2021
+Chris + Dani 
+Outline: 
+* Personal introductions
++ What operating system is Chris using? = windows 
+** action item: dani to investigate putty/windows terminal ect for Chris to use 
+* Discuss:
++ (i) issues and obstacles related to the 'practice reproducibility review' and xno questions, all good 
++ (ii) questions about the assigned reading, Campbell-Staton et al. 2017 xnope
+
+* Technical Items: 
++ Need to use some sort of groovey text editor that can work with github
++ Text editor (Atom) ?
++ R and RStudio ?
++ Using R-studio projects 
++ Screen share walk through of navigating GitHub:
+++ (discuss basic structure and forking vs cloning vs. downloading) - i will ditch forking becuase, well, I dont use it. 
++++ register for a free GitHub account - done
++++ install Git - done 
+http://git-scm.com/downloads
+which git
+git --version
++++ push to / pull from GitHub from the command line? from R studio? from Atom? - we used Rstudio, will do command line and atomnext week 
++++ in R 
++++ can also do on commandline git clone https://github.com/your-username/practice-git-skillz
+
++ Dryad in R
+** we didnt go through this as Chris is familar with R and uses R in her work
+
+```{r, Dryad}
+#install.packages("rdryad")
+library(rdryad)
+library(readxl)
+# example: get dryad dataset for reading:
+# REF:: Campbell-Staton et al., Science 357, 495–498 (2017)
+
+# DOI: 10.1126/science.aam5512
+#  Dryad Digital Repository: http://dx.doi.org/ 10.5061/dryad.g500m.
+
+## see what datasets they have 
+dryad_datasets("10.5061/dryad.g500m")
+data.doi = rdryad::dryad_download("10.5061/dryad.g500m") # is it in d .R_Cache
+data.doi # there is an xlsx file
+# what is it?
+head(readxl::read_xlsx(data.doi[[1]], sheet = 1))
+dim(readxl::read_xlsx(data.doi[[1]], sheet = 1))
+# remove it 
+rm(list = ls())
+```
+
+
+* Sam + Katherines instructions 
+Mentors will introduce interns to the basic structure behind these repositories, how to gather information describing a given dataset or script, and downloading/copying data. Interns should try to download or clone data from each repository. 
+
+o	With help from mentors, interns should practice cloning from GitHub using git clone in their terminal after installing git.Students should then install the package 'rdryad' to R using 'install.packages("rdryad")' and download a dataset using the function 'download_dryad()' input with the doi of a Dryad repository of interest.
+Once these meetings have occurred, Katherine and I will share resources to interns so they can learn about, install, and open Jupyter notebooks, a report format for Python similar to R markdown (referenced in last week's reading by Karl Broman).
