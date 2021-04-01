@@ -40,3 +40,11 @@ indat = read.csv("Animal_Crossing.csv", header = T)
 print(indat)
 ```
 
+
+
+## Jupyter and Python - Getting started 
+- most install guides say to use conda, we need to talk about this, cuz well, it can be a nightmare if you change your mind later about wanting to use it, some people dont like it ect. 
+- if you want it -> its here https://www.anaconda.com/products/individual#windows
+- xxx if you didnt install conda xxx have you got python (no, go here -> https://www.python.org/downloads/windows/)
+- did it install pi? check on CommandPromt <py get-pip.py> (see https://pip.pypa.io/en/stable/user_guide/)
+- < pip3 install jupyter > (on CommandPrompt, see here https://jupyter.org/install)
