@@ -1,0 +1,42 @@
+## Mobaxterm 
+- download it here -> https://mobaxterm.mobatek.net/
+
+## Shh to a login node
+-Open MobaXterm.
+-Click Session, then click SSH as the connection type.
+-In Remote Host, type login.discovery.neu.edu, make sure Port is set to 22, and click OK. (OPTIONAL: You can type your Northeastern username and password on MobaXterm, and it will save that information every time you sign in. If you opt to do this, you will be connected to Discovery after you click OK.)
+-At the prompt, type your Northeastern username and press Enter.
+-Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.
+-You are now connected to Discovery at a login node.
+
+## Transfering files using MobaXterm
+- make a file to transfer
+```{r}
+write.csv(data.frame(Animal_Name = c("Frog", "Shark", "Seastar"), Animal_Counts = c("10", "20", "30")), 
+          file = "Animal_Crossing.csv", quote = F, row.names = F)
+```
+### To transfer data using MobaXterm:
+-Open MobaXterm.
+-Click Session, then select SFTP.
+-In the Remote host field, type xfer.discovery.neu.edu
+-In the Username field, type your Northeastern username.
+-In the Port field, type 22.
+-In the Password box, type your Northeastern password and click OK. Click No if prompted to save your password.
+-You will now be connected to the transfer node and can transfer files through MobaXterm.
+
+
+## Start an interactive job, and start up R
+- Request what you need 
+srun --partition=express  --nodes 1 --ntasks 10 --cpus-per-task 2 --pty --export=ALL --mem=1G --time=01:00:00 /bin/bash
+- what programs can we use?
+module avail
+- now we can try to load R
+module which R
+module load R
+- use R to read in Animal_Crossing data 
+R
+```{r}
+indat = read.csv("Animal_Crossing.csv", header = T)
+print(indat)
+```
+

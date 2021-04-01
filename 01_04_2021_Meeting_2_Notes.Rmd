@@ -13,10 +13,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 2. Discovery cluster (?) 
    + Status
-   + Putty (windows terminal)
+   + mobaxterm https://mobaxterm.mobatek.net/ (we wont use Putty (windows terminal) like we discussed previously, as the discovery cluster suggests mobaxterm as a better alternative). See file called mobaxterm for a summry of things to get setup. 
    + Atom (text editor, command center for windows)
    + Shh to login node - discovery cluster
    
 3. Mentors and interns should work together on (i) entering search criteria into a database assigned to the intern, (ii) screening for one or two matches to our selection criteria, (ii) uploading the PDF and metadata for those matches to the appropriate directories and data sheet. I'm hoping this helps mentors connect with what itnerns are presently doing, and provides interns with an opportunity to discuss obstacles they might be experiencing during the lit survey.
   + 10 hours each to lit review - updates? 
   
+  
+### other notes:
+## making a csv for practicing scp files to login node
+```{r}
+write.csv(data.frame(Animal_Name = c("Frog", "Shark", "Seastar"), Animal_Counts = c("10", "20", "30")), 
+          file = "Animal_Crossing.csv", quote = F, row.names = F)
+```
