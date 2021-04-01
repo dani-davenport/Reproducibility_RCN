@@ -1,0 +1,22 @@
+---
+title: "Mentor Meeting 2"
+output: html_document
+authors: "Dani + Chris"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Agenda
+1. Chris: Interns should detail the professional development goal(s)
+   + Mentors should consider how they can help facilitate these goals either within the working group or within their own professional networks. Intern-mentor pairs should then draft one or a few action items for working toward those goals. Interns, feel free to tell your mentors what some of the action items we landed on during the Wk3 meeting were as well.
+
+2. Discovery cluster (?) 
+   + Status
+   + Putty (windows terminal)
+   + Atom (text editor, command center for windows)
+   + Shh to login node - discovery cluster
+   
+3. Mentors and interns should work together on (i) entering search criteria into a database assigned to the intern, (ii) screening for one or two matches to our selection criteria, (ii) uploading the PDF and metadata for those matches to the appropriate directories and data sheet. I'm hoping this helps mentors connect with what itnerns are presently doing, and provides interns with an opportunity to discuss obstacles they might be experiencing during the lit survey.
+  + 10 hours each to lit review - updates? 
+  
