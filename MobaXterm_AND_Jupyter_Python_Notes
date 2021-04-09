@@ -48,6 +48,9 @@ print(indat)
 - xxx if you didnt install conda xxx have you got python (no, go here -> https://www.python.org/downloads/windows/)
 - did it install pip? check on CommandPromt <py get-pip.py> (see https://pip.pypa.io/en/stable/user_guide/)
 - < pip3 install jupyter > (on CommandPrompt, see here https://jupyter.org/install)
+### try jupyter notebook
+jupyter notebook
+### try python 
 - open idle
 - try some stuff
   print("hello world")
